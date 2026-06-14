@@ -39,25 +39,25 @@ export default function Home() {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+        <div className="glass-panel p-6 rounded-2xl transition-transform hover:scale-[1.02] duration-300">
           <div className="flex items-center justify-between">
-            <h3 className="text-gray-500 font-medium">Total Balance</h3>
+            <h3 className="text-gray-600 dark:text-gray-400 font-medium">Total Balance</h3>
             <DollarSign className="text-blue-500" size={24} />
           </div>
           <p className="text-4xl font-bold mt-4">${balance.toLocaleString()}</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+        <div className="glass-panel p-6 rounded-2xl transition-transform hover:scale-[1.02] duration-300">
           <div className="flex items-center justify-between">
-            <h3 className="text-gray-500 font-medium">Total Income</h3>
+            <h3 className="text-gray-600 dark:text-gray-400 font-medium">Total Income</h3>
             <ArrowUpRight className="text-emerald-500" size={24} />
           </div>
           <p className="text-4xl font-bold mt-4 text-emerald-600 dark:text-emerald-400">+${totalIncome.toLocaleString()}</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-6 rounded-2xl shadow-sm">
+        <div className="glass-panel p-6 rounded-2xl transition-transform hover:scale-[1.02] duration-300">
           <div className="flex items-center justify-between">
-            <h3 className="text-gray-500 font-medium">Total Expenses</h3>
+            <h3 className="text-gray-600 dark:text-gray-400 font-medium">Total Expenses</h3>
             <ArrowDownRight className="text-rose-500" size={24} />
           </div>
           <p className="text-4xl font-bold mt-4 text-rose-600 dark:text-rose-400">-${totalExpense.toLocaleString()}</p>
@@ -65,13 +65,13 @@ export default function Home() {
       </div>
 
       {/* Transactions List */}
-      <section className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl shadow-sm overflow-hidden">
-        <div className="p-6 border-b border-gray-200 dark:border-gray-800 flex justify-between items-center">
+      <section className="glass-panel rounded-2xl overflow-hidden mt-8">
+        <div className="p-6 border-b border-gray-200 dark:border-gray-800/50 flex justify-between items-center bg-white/20 dark:bg-black/20">
           <h2 className="text-xl font-bold flex items-center gap-2">
             <Activity size={20} className="text-blue-500"/> Recent Transactions
           </h2>
         </div>
-        <div className="divide-y divide-gray-100 dark:divide-gray-800">
+        <div className="divide-y divide-gray-100 dark:divide-gray-800/50">
           {transactions.map((tx) => (
             <div key={tx.id} className="p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
               <div>
